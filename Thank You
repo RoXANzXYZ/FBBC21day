@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You & Welcome!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fbbc-red: #d92d2d;
+            --fbbc-blue: #00a3e0;
+            --fbbc-dark-gray: #1a1a1a;
+            --fbbc-light-gray: #f2f2f2;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--fbbc-light-gray); 
+            color: var(--text-dark); 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 80px 16px; 
+        }
+        .header-icon { 
+            font-size: 64px; 
+            color: #22c55e; /* Green Checkmark */
+        }
+        h1 { 
+            font-size: 40px; 
+            font-weight: 900; 
+            color: var(--fbbc-dark-gray); 
+            margin: 16px 0; 
+        }
+        p { 
+            font-size: 18px; 
+            margin-bottom: 32px; 
+            line-height: 1.6;
+        }
+        
+        /* New Personal Note Styling */
+        .personal-note-box {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 5px solid var(--fbbc-blue);
+            padding: 32px;
+            margin: 32px auto;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .personal-note-box .note-text {
+            font-style: italic;
+            font-size: 18px;
+            color: #4b5563;
+        }
+        .personal-note-box .note-signature {
+            font-weight: 700;
+            font-size: 16px;
+            text-align: right;
+            margin-top: 24px;
+            color: var(--fbbc-dark-gray);
+        }
+
+        .next-steps { 
+            margin-top: 48px; 
+            border-top: 1px solid #e5e7eb; 
+            padding-top: 48px; 
+        }
+        .next-steps h2 { 
+            font-size: 28px; 
+            color: var(--fbbc-dark-gray); 
+        }
+        .button-container { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 16px; 
+            margin-top: 32px; 
+        }
+        .cta-button { 
+            display: inline-block; 
+            background-color: var(--fbbc-red); 
+            color: white; 
+            padding: 16px 40px; 
+            font-size: 18px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            width: 100%;
+            max-width: 350px;
+            box-sizing: border-box;
+        }
+        .cta-button:hover { 
+            transform: translateY(-3px);
+            background-color: #b92525;
+        }
+        .secondary-button { 
+            background-color: var(--fbbc-dark-gray); 
+        }
+        .secondary-button:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-icon">&#10004;</div>
+        <h1>Congratulations & Welcome to the Family!</h1>
+        <p>Your payment was successful. We are so excited to have you join our Centerville Fit Body Boot Camp community!</p>
+
+        <div class="personal-note-box">
+            <p class="note-text">"We just wanted to personally thank you for joining our 21-Day Challenge. We believe fitness is about building a supportive community of real people, and our team is thrilled to be a part of your journey. We can't wait to see you in the studio!"</p>
+            <p class="note-signature">- Craig & Natalie, Owners<br>Centerville Fit Body Boot Camp</p>
+        </div>
+        <div class="next-steps">
+            <h2>Your Important Next Steps:</h2>
+            <p>Follow these steps to get set up for success.</p>
+            <div class="button-container">
+                
+                <a href="#" class="cta-button">Step 1: Book Your First Session</a>
+                
+                <a href="https://www.facebook.com/groups/1377046790218612" class="cta-button secondary-button">Step 2: Join Our Private Facebook Group</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
