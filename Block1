@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centerville Fit Body Boot Camp - Hero Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fbbc-red: #d92d2d;
+            --fbbc-blue: #00a3e0;
+        }
+
+        /* This tells the page to scroll smoothly */
+        html { 
+            scroll-behavior: smooth; 
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            font-size: 16px; /* Base font size */
+        }
+        
+        /* Hero Section Styling */
+        #hero { 
+            position: relative; 
+            color: white; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            padding: 2rem; 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877c333c019add380584b3f.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+        }
+
+        .hero-content { 
+            max-width: 800px; 
+        }
+
+        /* FIXED FONT SIZES TO PREVENT "HUGE" TEXT ISSUE */
+        .hero-content h1 { 
+            font-size: 64px; 
+            font-weight: 900; 
+            margin-bottom: 0.5rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+        }
+
+        .hero-content .subheadline { 
+            font-size: 22px; 
+            font-weight: 400; 
+            margin-bottom: 2rem; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        
+        /* Button Styling */
+        .cta-button { 
+            display: inline-block; 
+            background-color: var(--fbbc-red); 
+            color: white; 
+            padding: 16px 40px; 
+            font-size: 18px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            text-transform: uppercase; 
+            transition: transform 0.2s ease, background-color 0.2s ease; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            border: none; 
+            cursor: pointer; 
+        }
+        .cta-button:hover { 
+            transform: translateY(-3px); 
+            background-color: #b92525; 
+        }
+
+        /* This is a dummy section for demonstration purposes */
+        #offer-placeholder {
+            height: 100vh;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 42px; }
+            .hero-content .subheadline { font-size: 18px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Stop Starting Over.</h1>
+            <p class="subheadline">For Centerville residents 40+ who are tired of losing momentum. Our 21-Day Challenge is designed to build the one thing you need for lasting results: **Consistency**.</p>
+            
+            <a href="#offer" class="cta-button">Claim Your Spot for $99</a>
+        </div>
+    </section>
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
