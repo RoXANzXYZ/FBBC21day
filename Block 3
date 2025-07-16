@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Official FBBC Brand Colors */
+            --fbbc-red: #d92d2d;
+            --fbbc-blue: #00a3e0;
+            --fbbc-dark-gray: #1a1a1a;
+            --fbbc-light-gray: #f2f2f2;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --container-width: 1100px;
+        }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--fbbc-light-gray); color: var(--text-dark); line-height: 1.6; font-size: 16px; }
+        .cta-button { display: inline-block; background-color: var(--fbbc-red); color: white; padding: 16px 40px; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 8px; text-transform: uppercase; transition: transform 0.2s ease, background-color 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: none; cursor: pointer; }
+        .cta-button:hover { transform: translateY(-3px); background-color: #b92525; }
+        .section { padding: 80px 16px; max-width: var(--container-width); margin: 0 auto; text-align: center; }
+        .section-header { font-size: 40px; font-weight: 900; margin-bottom: 16px; color: var(--fbbc-dark-gray); }
+        .section-header span { color: var(--fbbc-blue); }
+        #guarantee { background-color: #fff; }
+        .guarantee-box { border: 3px dashed var(--fbbc-blue); padding: 32px; max-width: 800px; margin: 0 auto; border-radius: 10px; }
+        .guarantee-box h3 { font-size: 28px; color: var(--fbbc-blue); margin-top: 0; }
+        #faq { background-color: var(--fbbc-light-gray); }
+        .faq-container { max-width: 800px; margin: 48px auto 0 auto; text-align: left; }
+        .faq-item { background-color: white; margin-bottom: 16px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .faq-question { padding: 24px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; padding: 0 24px; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .faq-answer p { margin-top: 0; margin-bottom: 24px; }
+        .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 24px; }
+        .faq-toggle { font-size: 24px; transition: transform 0.3s ease; color: var(--fbbc-blue); }
+        .faq-item.active .faq-toggle { transform: rotate(45deg); }
+        @media (max-width: 768px) { .section-header { font-size: 32px; } }
+    </style>
+</head>
+<body>
+    <section id="guarantee" class="section">
+         <div class="guarantee-box">
+            <h3>Our "Show Up & Win" <span>Guarantee</span></h3>
+            <p>We are so confident that our accountability system works that we make a simple promise. If you come to at least 8 workouts in your 21 days and don't feel stronger, more energetic, and more confident that you can build a lasting fitness habit, we will give you a full refund. No questions asked.</p>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <h2 class="section-header">Frequently Asked <span>Questions</span></h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question"><span>I'm a complete beginner. Is this for me?</span><span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Absolutely! Our workouts are designed for all fitness levels. Our coaches are experts at modifying every single exercise to meet you where you are. This challenge is built for beginners who want to build a foundation correctly and safely.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span>What happens after the 21 days?</span><span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Near the end of your challenge, you'll have a "Success Session" with your coach to celebrate your progress. If you love the results and want to continue your transformation, we'll show you how you can become a full-time member. There's absolutely no pressure or obligation.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span>How long are the workouts?</span><span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Our signature "Afterburn" workouts are 30 minutes long. They are designed using a combination of High-Intensity Interval Training (HIIT) and Active Rest Training to get you amazing results in the most efficient way possible for your busy schedule.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // This JavaScript controls the FAQ dropdowns
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
