@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Official FBBC Brand Colors */
+            --fbbc-red: #d92d2d;
+            --fbbc-blue: #00a3e0;
+            --fbbc-dark-gray: #1a1a1a;
+            --fbbc-light-gray: #f2f2f2;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --container-width: 1100px;
+        }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--fbbc-light-gray); color: var(--text-dark); line-height: 1.6; font-size: 16px; }
+        .cta-button { display: inline-block; background-color: var(--fbbc-red); color: white; padding: 16px 40px; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 8px; text-transform: uppercase; transition: transform 0.2s ease, background-color 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: none; cursor: pointer; }
+        .cta-button:hover { transform: translateY(-3px); background-color: #b92525; }
+        .section { padding: 80px 16px; max-width: var(--container-width); margin: 0 auto; text-align: center; }
+        .section-header { font-size: 40px; font-weight: 900; margin-bottom: 16px; color: var(--fbbc-dark-gray); }
+        .section-header span { color: var(--fbbc-blue); }
+        .section-subheader { font-size: 18px; max-width: 700px; margin: 0 auto 48px auto; color: var(--text-dark); }
+        #problem { background-color: #fff; }
+        .problem-icons { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 32px; margin-top: 48px; }
+        .icon-item { flex-basis: 250px; max-width: 250px; }
+        .icon-item img { width: 70px; height: 70px; margin-bottom: 16px; }
+        .icon-item h3 { font-size: 20px; margin-bottom: 8px; color: var(--fbbc-dark-gray); }
+        #social-proof { background-color: var(--fbbc-light-gray); }
+        .testimonials { display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; margin-top: 48px; }
+        .testimonial-card { background-color: #fff; border-radius: 10px; padding: 32px; flex-basis: 320px; max-width: 320px; box-shadow: 0 4px 25px rgba(0,0,0,0.08); text-align: left; border-top: 5px solid var(--fbbc-blue); }
+        .testimonial-card p { font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; margin-top: 24px; }
+        .testimonial-author img { width: 50px; height: 50px; border-radius: 50%; margin-right: 16px; object-fit: cover; }
+        .author-info strong { display: block; font-size: 18px; }
+        #offer { background-color: var(--fbbc-dark-gray); color: var(--text-light); }
+        #offer .section-header, #offer .section-subheader { color: white; }
+        .offer-stack { max-width: 800px; margin: 48px auto 0 auto; text-align: left; }
+        .offer-item { background-color: rgba(255, 255, 255, 0.05); padding: 24px; border-radius: 8px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .offer-item h3 { margin: 0; font-size: 18px; }
+        .offer-item .value { font-weight: 700; font-size: 18px; color: var(--fbbc-red); }
+        .strikethrough { text-decoration: line-through; opacity: 0.7; }
+        .total-value { text-align: center; margin-top: 32px; }
+        .total-value h2 { font-size: 32px; margin-bottom: 8px; }
+        .total-value .price { font-size: 64px; font-weight: 900; color: var(--fbbc-red); }
+        @media (max-width: 768px) { .section-header { font-size: 32px; } .total-value .price { font-size: 50px; } }
+    </style>
+</head>
+<body>
+    <section id="problem" class="section">
+        <h2 class="section-header">Does This <span>Sound Familiar?</span></h2>
+        <p class="section-subheader">You start strong. You go to the gym, you eat a little better, but after a few weeks... life gets in the way. Motivation fades and you're right back where you started, feeling defeated.</p>
+        <div class="problem-icons">
+            <div class="icon-item">
+                <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877b80b204f2d3b55d41cc9.png">
+                <h3>No Accountability</h3>
+                <p>Without a coach and a community checking in, it's too easy to quit on yourself.</p>
+            </div>
+            <div class="icon-item">
+                <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877bb341db12933af46952a.png" alt="No Clear Plan Icon">
+                <h3>No Clear Plan</h3>
+                <p>Wandering around a gym without a proven plan leads to confusion and zero results.</p>
+            </div>
+            <div class="icon-item">
+                <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877b8c8204f2d7c5fd41e65.png">
+                <h3>No Real Motivation</h3>
+                <p>When workouts are boring and you don't see progress, it's impossible to stay motivated.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-proof" class="section">
+        <h2 class="section-header">This Isn't Just a Gym. <span>It's a Community.</span></h2>
+        <p class="section-subheader">See what other Centerville residents are saying about their experience.</p>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>"Amazing coaching staff. So energetic and designed to what your goals are. They are always upbeat and supportive. Every workout is different. I cannot recommend them enough. Great all around, and definitely above all the rest."</p>
+                <div class="testimonial-author">
+                    <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877d0156c565e19281f493d.png" alt="Testimonial author 1">
+                    <div class="author-info">
+                        <strong>Cyndie S.</strong>
+                        <span>Working Mom</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Absolutely love the team! The trainers are fantastic and the energy is contagious. They do a great job working with all fitness levels and ages! Grateful they started a Fit Body in Centerville!!"</p>
+                <div class="testimonial-author">
+                    <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877d0156c565e19281f493d.png" alt="Testimonial author 2">
+                    <div class="author-info">
+                        <strong>Stephanie S.</strong>
+                        <span>Small Buisness Owner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The highlight of my day, Definitely makes a huge difference in my energy levels! Love the fact that it’s only 30 minutes. The staff makes this place the best place to work out!!!"</p>
+                <div class="testimonial-author">
+                    <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/6877cfe26c565e85271f4905.png" alt="Testimonial author 3">
+                    <div class="author-info">
+                        <strong>Cristina C.</strong>
+                        <span>Local Realtor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="offer" class="section">
+        <h2 class="section-header">What You Get in the <span>21-Day Challenge</span></h2>
+        <p class="section-subheader">This is more than just a trial. It's a complete system to build the habit of fitness.</p>
+        <div class="offer-stack">
+            <div class="offer-item">
+                <h3>Unlimited 30-Minute Workouts</h3>
+                <span class="value">($150 Value)</span>
+            </div>
+            <div class="offer-item">
+                <h3>A Dedicated Accountability Coach</h3>
+                <span class="value">($100 Value)</span>
+            </div>
+            <div class="offer-item">
+                <h3>Daily SMS Check-ins & Support</h3>
+                <span class="value">($50 Value)</span>
+            </div>
+            <div class="offer-item">
+                <h3>"Quick Start" Goal Setting Session</h3>
+                <span class="value">($50 Value)</span>
+            </div>
+            <div class="offer-item">
+                <h3>Private Community Access</h3>
+                <span class="value">($25 Value)</span>
+            </div>
+        </div>
+        <div class="total-value">
+            <h2>Total Value: <span class="strikethrough">$375</span></h2>
+            <p>Get Started Today For Only</p>
+            <div class="price">$99</div>
+        </div>
+    </section>
+</body>
+</html>
