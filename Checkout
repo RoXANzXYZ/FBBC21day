@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Enrollment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: #F9FAFB; color: #374151; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding-top: 4rem; }
+        .checkout-container { width: 100%; max-width: 900px; padding: 0 1rem; }
+        .header { text-align: center; margin-bottom: 2rem; }
+        .header img { width: 100px; margin-bottom: 1rem; }
+        .header h1 { font-size: 2rem; color: #111827; margin: 0; }
+        .order-summary { background-color: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; }
+        .order-summary h2 { font-size: 1.3rem; margin-top: 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem; }
+        .order-item { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+        .total { font-weight: 700; font-size: 1.2rem; border-top: 2px solid #111827; padding-top: 1rem; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVLxWtC_R4B5_rdpYOdDTiWKtuhXMcEzfErA&s" alt="FBBC Logo">
+            <h1>Complete Your Enrollment</h1>
+        </div>
+
+        <div class="order-summary">
+            <h2>Your Order Summary</h2>
+            <div class="order-item">
+                <span>21-Day Accountability & Consistency Challenge</span>
+                <span>$99.00</span>
+            </div>
+            <div class="order-item total">
+                <span>Total:</span>
+                <span>$99.00</span>
+            </div>
+        </div>
+
+        </div>
+</body>
+</html>
