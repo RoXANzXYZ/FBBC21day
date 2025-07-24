@@ -1,0 +1,62 @@
+/* --- 2-STEP ORDER FORM CUSTOMIZATIONS --- */
+
+/* --- Custom Headline Colors --- */
+.ghl-order-form-group .main-headline {
+    color: #FFC42C !important; /* Main Headline Yellow */
+}
+.ghl-order-form-group .sub-headline {
+    color: #495057 !important; /* Sub-headline Dark Gray */
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+}
+
+/* --- Progress Bar (Step 1 / Step 2) --- */
+.ghl-progress-bar .ghl-step-heading {
+    color: #a0a0a0 !important; /* Inactive Step Color */
+    border-bottom: 3px solid #dee2e6 !important;
+}
+.ghl-progress-bar .ghl-step-heading.ghl-step-heading-active {
+    color: #FFC42C !important; /* Active Step Yellow */
+    border-bottom: 3px solid #FFC42C !important;
+}
+
+/* --- Form Fields (Name, Email, etc.) --- */
+.ghl-order-form-group .form-control {
+    border-radius: 6px !important;
+    border: 1px solid #ced4da !important;
+    padding: 12px 15px !important;
+}
+.ghl-order-form-group .form-control:focus {
+    border-color: #FFC42C !important;
+    box-shadow: 0 0 0 3px rgba(255, 196, 44, 0.25) !important;
+}
+
+/* --- Buttons ("Go to Step 2" and Final Submit) --- */
+.ghl-order-form-group .btn-next,
+.ghl-order-form-group .btn-submit {
+    background-color: #FFC42C !important; /* Button Yellow */
+    color: #212529 !important; /* Button Text Charcoal */
+    border-radius: 6px !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    padding: 15px !important;
+}
+.ghl-order-form-group .btn-next:hover,
+.ghl-order-form-group .btn-submit:hover {
+    background-color: #e6b027 !important; /* Darker Yellow on Hover */
+    transform: translateY(-3px) !important;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* --- Order Summary Box --- */
+.order-summary-box {
+    background-color: #F8F9FA !important; /* Light Gray Background */
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+}
