@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tired of starting over? Join the 21 Day Accountability Challenge in Centerville for women over 40. Get the coaching and support you need to finally see results.">
+    
+    <title>The 21 Day Accountability Challenge | Centerville Fit Body Boot Camp</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --fbbc-primary: #FFC42C; /* Logo Yellow */
+            --fbbc-primary-dark: #e6b027; /* Darker Yellow for Hover */
+            --fbbc-black: #212529;
+            --fbbc-gray: #495057;
+            --bg-light: #F8F9FA;
+            --white: #FFFFFF;
+            --border-color: #dee2e6;
+            --green: #28a745;
+            --star-yellow: #FFC107;
+        }
+
+        /* --- GLOBAL RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--fbbc-gray);
+            background-color: var(--white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 100px 0; text-align: center; }
+        .section-bg { background-color: var(--bg-light); }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 700; line-height: 1.2; color: var(--fbbc-black); text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: 4rem; }
+        h2 { font-size: 3rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem; }
+        .section-heading { margin-bottom: 4rem; }
+        .text-primary { color: var(--fbbc-primary); }
+
+        /* --- BUTTONS (FINAL VERSION) --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--fbbc-primary);
+            color: var(--fbbc-black);
+            font-weight: 700;
+            padding: 18px 40px; 
+            text-decoration: none; 
+            border-radius: 6px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase; 
+            letter-spacing: 1.5px;
+            margin-top: 1.5rem; 
+            border: none; 
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); 
+            transition: all 0.3s ease; 
+        }
+        .cta-button:hover {
+            background-color: var(--fbbc-primary-dark);
+            color: var(--fbbc-black);
+            transform: translateY(-5px); 
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- HEADER --- */
+        .site-header {
+            position: sticky; top: 0; z-index: 1000;
+            background-color: var(--fbbc-black);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo img {
+            max-height: 95px;
+            width: auto;
+        }
+        .site-header .cta-button {
+            margin-top: 0;
+            box-shadow: 0 0 10px rgba(255, 196, 44, 0.7);
+            animation: pulse 1.5s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(255, 196, 44, 0.7); transform: scale(1); }
+            100% { box-shadow: 0 0 20px rgba(255, 196, 44, 0.9); transform: scale(1.03); }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            padding: 120px 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1)), url('https://images.pexels.com/photos/4761787/pexels-photo-4761787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center 70%;
+        }
+
+        /* --- SCROLL ANIMATIONS --- */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+        /* --- PROBLEM/SOLUTION & OFFER SECTION --- */
+        .problem-list { max-width: 650px; margin: 0 auto 3rem auto; text-align: left; }
+        .problem-item { display: flex; align-items: flex-start; gap: 20px; font-size: 1.15rem; color: var(--fbbc-gray); margin-bottom: 1.5rem; }
+        .problem-item i { color: var(--fbbc-primary); font-size: 1.5rem; margin-top: 5px; }
+        .problem-item-text { flex: 1; }
+        .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .solution-card {
+            background-color: var(--white); padding: 40px 30px;
+            border-radius: 8px; border: 1px solid var(--border-color);
+            border-top: 4px solid var(--fbbc-primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .solution-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.07); }
+        .offer-card { max-width: 800px; margin: 0 auto; background-color: var(--white); border: 1px solid var(--border-color); border-radius: 8px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); overflow: hidden; }
+        .offer-card h3 { font-size: 2rem; }
+        .offer-list { list-style: none; padding: 0; margin: 2rem 0; text-align: left; max-width: 550px; margin-left: auto; margin-right: auto;}
+        .offer-list li { display: flex; align-items: flex-start; gap: 15px; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.5; }
+        .offer-list li i { color: var(--green); font-size: 1.4rem; margin-top: 4px; }
+        .offer-list strong { color: var(--fbbc-black); }
+        .price { font-size: 4.5rem; font-family: 'Oswald'; color: var(--fbbc-primary); line-height: 1; margin-bottom: 0.5rem; }
+        .price-subtext { font-size: 1.1rem; color: var(--fbbc-gray); margin-top: 0; }
+        .scarcity-text { font-weight: 700; color: var(--fbbc-black); margin: 2rem auto 0 auto; max-width: 500px; }
+        .guarantee-box { margin-top: 2.5rem; border-top: 1px solid var(--border-color); padding-top: 2rem; background-color: var(--bg-light); margin-left: -40px; margin-right: -40px; padding-left: 40px; padding-right: 40px; padding-bottom: 1px; margin-bottom: -40px; }
+        .guarantee-box h3 { font-size: 1.5rem; text-transform: none; color: var(--fbbc-black); }
+        .guarantee-box i { color: var(--green); }
+        .guarantee-box p { font-size: 1rem; max-width: 600px; margin-top: 0.5rem;}
+        
+        /* --- SCHEDULE, VIDEO, GALLERY & REVIEWS --- */
+        .schedule-container { max-width: 700px; margin: 0 auto; border: 1px solid var(--border-color); border-radius: 8px; text-align: left; overflow: hidden; background-color: var(--white); }
+        .schedule-day { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid var(--border-color); }
+        .schedule-day:last-child { border-bottom: none; }
+        .schedule-day-name { font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 500; color: var(--fbbc-black); }
+        .schedule-day-times { font-size: 1.1rem; color: var(--fbbc-gray); font-weight: 500; }
+        .sunday { color: var(--fbbc-primary); font-weight: 700; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 900px; margin: 0 auto; border-radius: 8px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); background-color: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.05); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); color: var(--white); padding: 40px 15px 15px 15px; text-align: center; font-size: 1.1rem; font-weight: 500; }
+
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch; }
+        .review-card { background-color: var(--white); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .review-card .stars { color: var(--star-yellow); font-size: 1.2rem; margin-bottom: 1rem; }
+        .review-card .review-text { font-style: italic; color: var(--fbbc-gray); flex-grow: 1; margin-bottom: 1.5rem; }
+        .review-card .author { font-weight: 700; color: var(--fbbc-black); margin-top: auto; margin-bottom: 0; }
+
+        /* --- FAQ SECTION --- */
+        .faq-list { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+        .faq-question { padding: 20px; font-family: 'Oswald', sans-serif; font-size: 1.3rem; color: var(--fbbc-black); font-weight: 500; cursor: pointer; position: relative; }
+        .faq-question::after { content: '+'; position: absolute; right: 20px; font-size: 2rem; color: var(--fbbc-primary); transition: transform 0.3s; }
+        .faq-item.active .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; }
+        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 200px; }
+        
+        /* --- FOOTER --- */
+        .site-footer { background-color: var(--fbbc-black); color: #ced4da; padding: 60px 0; text-align: center; }
+        .site-footer p { margin-bottom: 1rem; }
+        .site-footer .logo { margin-bottom: 1.5rem; display: inline-block; }
+        .footer-contact p { color: #adb5bd; font-size: 1rem; margin-bottom: 0.75rem; }
+        .footer-contact a { color: var(--white); text-decoration: none; transition: color 0.3s ease; }
+        .footer-contact a:hover { color: var(--fbbc-primary); }
+        .footer-contact i { color: var(--fbbc-primary); margin-right: 10px; width: 20px; }
+        .copyright { margin-top: 2rem; font-size: 0.9rem; color: var(--fbbc-gray); }
+        
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; } h2 { font-size: 2.2rem; }
+            section { padding: 80px 0; }
+            .solution-grid { grid-template-columns: 1fr; gap: 20px; }
+            .offer-card, .guarantee-box { padding-left: 20px; padding-right: 20px;}
+            .guarantee-box { margin-left: -20px; margin-right: -20px; margin-bottom: -40px;}
+            .price { font-size: 3.5rem; }
+            .logo img { max-height: 70px; }
+        }
+        @media (max-width: 500px) {
+            .schedule-day { flex-direction: column; align-items: flex-start; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/68790d4202da4713ce431768.png" alt="Centerville Fit Body Boot Camp Logo">
+            </a>
+            <a href="#start-now" class="cta-button">Join The Challenge</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h1>STOP "STARTING OVER" <span class="text-primary">EVERY MONDAY</span></h1>
+                    <p style="max-width: 800px; margin-top: 1.5rem; font-size: 1.2rem;">This isn't just another workout plan. It's a 21-day promise to yourself, with the hands-on coaching and support you need to finally feel strong, energized, and <strong>confident in your own skin again.</strong></p>
+                    <a href="#start-now" class="cta-button">I'M READY FOR A REAL CHANGE</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-bg">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h2>DOES THIS <span class="text-primary">FEEL FAMILIAR?</span></h2>
+                </div>
+                <div class="problem-list animate-on-scroll">
+                    <div class="problem-item"><i class="fa-solid fa-calendar-week"></i><div class="problem-item-text"><strong>You have great intentions on Sunday night,</strong> but by Wednesday, life gets crazy, your workout plan is derailed, and you're back to promising yourself "I'll start again next week."</div></div>
+                    <div class="problem-item"><i class="fa-solid fa-mug-hot"></i><div class="problem-item-text"><strong>You're running on fumes by 3 PM,</strong> reaching for another cup of coffee or a sugary snack just to power through the afternoon, and the thought of a workout feels totally exhausting.</div></div>
+                    <div class="problem-item"><i class="fa-solid fa-shirt"></i><div class="problem-item-text"><strong>You look in the mirror and don't quite recognize the person staring back.</strong> You know that strong, vibrant woman is still in there, but fatigue and a few extra pounds are hiding her away.</div></div>
+                    <div class="problem-item"><i class="fa-solid fa-heart-crack"></i><div class="problem-item-text"><strong>You feel like you're doing it all alone.</strong> You've tried the apps and the at-home videos, but you're missing a real coach and a team of supportive women who actually *get it*.</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                 <div class="section-heading animate-on-scroll">
+                    <h2>Our 21-Day Challenge is Designed to <span class="text-primary">Break The Cycle</span></h2>
+                    <p>This isn't just 21 days of workouts. It's a complete system of coaching, accountability, and community support designed to deliver results and build habits that last.</p>
+                </div>
+                <div class="solution-grid">
+                    <div class="solution-card animate-on-scroll" style="transition-delay: 0s;"><h3>30-MINUTE GUIDED WORKOUTS</h3><p>Never feel lost or intimidated again. Our expert coaches guide you through fun, effective 30-minute sessions that are modified for your body, ensuring you get stronger safely.</p></div>
+                    <div class="solution-card animate-on-scroll" style="transition-delay: 0.1s;"><h3>PROVEN "AFTERBURN" EFFECT</h3><p>Our workouts are scientifically designed to boost your metabolism for up to 36 hours after you leave. You'll burn more calories all day long, even while you rest.</p></div>
+                    <div class="solution-card animate-on-scroll" style="transition-delay: 0.2s;"><h3>UNSTOPPABLE ACCOUNTABILITY</h3><p>Your secret weapon. Personal support from your coach and a private group of local women on the same journey. This is the key to staying consistent long after motivation fades.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-bg">
+            <div class="container">
+                 <div class="section-heading animate-on-scroll">
+                    <h2>Our Session <span class="text-primary">Schedule</span></h2>
+                    <p>Find a time that fits your busy life. Each fun, effective session is only 30 minutes!</p>
+                </div>
+                <div class="schedule-container animate-on-scroll">
+                    <div class="schedule-day"><span class="schedule-day-name">Monday - Thursday</span><span class="schedule-day-times">5:15 AM / 6:15 AM / 7:15 AM / 8:15 AM / 5:00 PM / 6:00 PM</span></div>
+                     <div class="schedule-day"><span class="schedule-day-name">Friday</span><span class="schedule-day-times">5:15 AM / 6:15 AM / 7:15 AM / 8:15 AM</span></div>
+                    <div class="schedule-day"><span class="schedule-day-name">Saturday</span><span class="schedule-day-times">8:00 AM / 9:00 AM</span></div>
+                    <div class="schedule-day"><span class="schedule-day-name">Sunday</span><span class="schedule-day-times sunday">Closed</span></div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                 <div class="section-heading animate-on-scroll">
+                    <h2>See The <span class="text-primary">Fit Body Difference</span></h2>
+                     <p>It's one thing to talk about results, but it's another to see the energy and community for yourself. Watch this to see what makes our program unique.</p>
+                </div>
+                <div class="video-wrapper animate-on-scroll">
+                    <iframe src="https://www.youtube.com/watch?v=9WSgPiM7q28" title="Member Testimonials and Transformations Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-bg">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h2>Celebrating Our Centerville <span class="text-primary">Fit Body Family</span></h2>
+                    <p>We're a community of real people achieving our goals together. See some of our amazing members in action and celebrating their hard-earned milestones!</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll">
+                        <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/687a4e570657f096b1e88d56.jpeg" alt="Centerville Fit Body member celebrating an accomplishment">
+                        <div class="gallery-caption">Tammy's 25th Session!</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/687a4e5888de2540422b3a85.jpeg" alt="Fit Body Boot Camp members celebrating together">
+                        <div class="gallery-caption">Megan Crushes Her 25th Session!</div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/687a4e5788de25fb0f2b3a84.jpeg" alt="Members working out with battle ropes at Centerville Fit Body">
+                        <div class="gallery-caption">Afterburn Workouts in Action!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h2>What Our Members Say on <span class="text-primary">Google</span></h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card animate-on-scroll"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">"If you’re looking for a gym that delivers results, energy, and community — Centerville Fit Body Boot Camp is the place to be! From the moment you walk in, you feel welcomed, supported, and ready to crush your goals. Natalie and Craig, the owners, are absolutely fantastic. They’re not just running a gym — they’ve built a fitness family."</p><p class="author">- Jennifer K.</p></div>
+                    <div class="review-card animate-on-scroll" style="transition-delay: 0.1s;"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">"Amazing coaching staff. So energetic and designed to what your goals are. They are always upbeat and supportive. Every workout is different. I cannot recommend them enough. Great all around. And definitely above all the rest."</p><p class="author">- Cyndie S.</p></div>
+                    <div class="review-card animate-on-scroll" style="transition-delay: 0.2s;"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">"Fitbody workouts are quick 30 min sessions that include cardio and strength! Owners Craig and Natalie and the other coaching staff are friendly and make an effort to know everyone’s name and workout abilities. Always options for exercise modifications too for any skill level."</p><p class="author">- Lucy K.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="start-now" class="section-bg">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                     <h2>HERE'S THE <span class="text-primary">IRRESISTIBLE OFFER</span></h2>
+                </div>
+                <div class="offer-card animate-on-scroll">
+                    <h3>YES! I'm Ready to Commit. Here's Everything I Get:</h3>
+                    <ul class="offer-list">
+                        <li><i class="fa-solid fa-circle-check"></i><div><strong>THE WORKOUTS:</strong> 21 days of unlimited access to our proven 30-minute Afterburn sessions that will torch calories and build lean muscle.</div></li>
+                        <li><i class="fa-solid fa-circle-check"></i><div><strong>THE PLAN:</strong> A private 1-on-1 meeting to map out your personal goals and create a success plan tailored just for you.</div></li>
+                        <li><i class="fa-solid fa-circle-check"></i><div><strong>THE ACCOUNTABILITY (The Secret Sauce):</strong> This is what makes this challenge different. You get a dedicated coach who is personally invested in your success, daily check-ins to keep you on track, and the supportive push you need on days when your motivation is low. <strong>We simply won't let you give up on yourself.</strong></div></li>
+                        <li><i class="fa-solid fa-circle-check"></i><div><strong>THE COMMUNITY:</strong> Join a private group of supportive, like-minded women from Centerville who will inspire you every single day.</div></li>
+                    </ul>
+                    <div class="price">$41</div>
+                    <p class="price-subtext">Just $1.95 a day for 21 days of expert coaching and accountability!</p>
+                    <p class="scarcity-text">To ensure personal coaching and amazing results, our challenge groups are kept small. Spots fill up quickly!</p>
+                    <a href="#!go-next-step" class="cta-button">SECURE MY SPOT NOW FOR $41</a>
+                    <div class="guarantee-box">
+                        <h3><i class="fa-solid fa-shield-halved"></i> The "Love It Or It's Free" Guarantee</h3>
+                        <p>We are so confident that you will see and feel results that we offer a 100% money-back guarantee. If you complete the 21 Day Challenge and don't feel stronger, more energetic, and absolutely love our community, just let us know and we'll refund your $41 investment. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <h2>Your Questions, <span class="text-primary">Answered</span></h2>
+                </div>
+                <div class="faq-list animate-on-scroll">
+                    <div class="faq-item"><div class="faq-question">I have old injuries or bad knees. Can I do this?</div><div class="faq-answer"><p>Absolutely. Our specialty is modifying workouts to be low-impact yet highly effective. Our coaches will work with you to ensure you're training safely around any physical limitations, so you can build strength without fear of injury.</p></div></div>
+                    <div class="faq-item"><div class="faq-question">What if I'm a complete beginner and totally out of shape?</div><div class="faq-answer"><p>You are in the perfect place! This challenge is designed to meet you exactly where you are. We celebrate starting points, not just finishing lines. You'll progress at a pace that feels right for you, surrounded by support.</p></div></div>
+                    <div class="faq-item"><div class="faq-question">I have zero time. Are the workouts long?</div><div class="faq-answer"><p>Not at all. Our signature Afterburn workouts are just 30 minutes long. They are scientifically designed to give you the best possible results in the shortest amount of time, boosting your metabolism for hours after you leave.</p></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://storage.googleapis.com/msgsndr/r0ottkjnB7s0s9wfq7vY/media/68790d4202da4713ce431768.png" alt="Centerville Fit Body Boot Camp Logo">
+            </a>
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-location-dot"></i> 773 Miamisburg Centerville Rd, Centerville, OH</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:513-334-7945">513-334-7945</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:natalie@centervillefitbody.com">natalie@centervillefitbody.com</a></p>
+            </div>
+            <p class="copyright">© 2025 Centerville Fit Body Boot Camp. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- SCROLL ANIMATION OBSERVER ---
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    scrollElements.forEach(el => observer.observe(el));
+
+    // --- FAQ ACCORDION ---
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                activeItem.classList.remove('active');
+            });
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // --- DYNAMIC DATE ---
+    const dateElement = document.getElementById('current-date');
+    if (dateElement) {
+        const today = new Date();
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('en-US', options);
+    }
+});
+</script>
+
+</body>
+</html>
